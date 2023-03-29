@@ -17,13 +17,13 @@ class RomanNumeralConverted:
 
 
 romanNumerals = {
-    "I": RomanNumeralConverted(roman="I", arabic=1, precedingLetter=""),
-    "V": RomanNumeralConverted(roman="V", arabic=5, precedingLetter="I"),
-    "X": RomanNumeralConverted(roman="X", arabic=10, precedingLetter="I"),
-    "L": RomanNumeralConverted(roman="L", arabic=50, precedingLetter="X"),
-    "C": RomanNumeralConverted(roman="C", arabic=100, precedingLetter="X"),
-    "D": RomanNumeralConverted(roman="D", arabic=500, precedingLetter="C"),
-    "M": RomanNumeralConverted(roman="M", arabic=1000, precedingLetter="C"),
+    "I": 1,
+    "V": 5,
+    "X": 10,
+    "L": 50,
+    "C": 100,
+    "D": 500,
+    "M": 1000,
 }
 
 
@@ -37,7 +37,7 @@ def convertRomanToArabic(romanString):
 
     i = 0
     while i < len(romanString):
-        number = romanNumerals.get(romanString[i]).arabic
+        number = romanNumerals.get(romanString[i])
 
         # Since we always add 'number', we need to check if 'previousNumber' should have been subtracted based on the rules of roman numerals. If it was, we have to subtract it twice (once to negate it, twice to make it a subtraction, instead of negation).
         if number > previousNumber:
