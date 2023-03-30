@@ -1,21 +1,6 @@
 import re
 
 
-class RomanNumeralConverted:
-    """An object that contains values to convert a Roman letter to an Arabic counterpart."""
-
-    def __init__(self, roman, arabic, precedingLetter):
-        self.roman = roman
-        """The Roman letter."""
-        self.arabic = arabic
-        """The Arabic value for the roman letter."""
-        self.precedingLetter = precedingLetter
-        """The Roman letter that is allowed to be before this letter."""
-
-    def isSmaller(currentLetter):
-        """Checks that the currentLetter is smaller than the precedingLetter."""
-
-
 romanNumerals = {
     "I": 1,
     "V": 5,
